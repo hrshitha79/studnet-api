@@ -9,11 +9,14 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     int std_rollno;
     String std_name;
+    String  std_address;
+
 
     public Student(){}
-    public Student(int std_rollno, String std_name) {
+    public Student(int std_rollno, String std_name, String std_address) {
         this.std_rollno = std_rollno;
         this.std_name = std_name;
+        this.std_address = std_address;
     }
 
     public int getStd_rollno() {
@@ -30,5 +33,13 @@ public class Student {
 
     public void setStd_name(String std_name) {
         this.std_name = std_name;
+    }
+
+    public String getStd_address() {
+        return std_address;
+    }
+
+    public void setStd_address(String std_address) {
+        this.std_address = std_address;
     }
 }
